@@ -1,11 +1,11 @@
+import 'package:alfyhaa_flutter_app/LoginScreen.dart';
 import 'package:flutter/material.dart';
 
 class MyScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _MyScreen();
-
+    return new _MyScreen();
   }
 }
 
@@ -14,7 +14,6 @@ class _MyScreen extends State<MyScreen> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-
       appBar: new AppBar(
         title: new Text("معهد الفيحاء المهني"),
         centerTitle: true,
@@ -33,12 +32,12 @@ class _MyScreen extends State<MyScreen> {
         color: Colors.greenAccent,
         child: new Column(
           children: <Widget>[
-            Image(image: AssetImage("Assets/image/image_starter.jpg"),
+            Image(
+              image: AssetImage("Assets/image/image_starter.jpg"),
               width: 400,
               fit: BoxFit.fitWidth,
             ),
             Padding(padding: EdgeInsets.only(top: 15)),
-
             new Text(
               " مرحباً بكم في تطبيق معهد الفيحاء المهني",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -47,7 +46,8 @@ class _MyScreen extends State<MyScreen> {
             SizedBox(
               child: new RaisedButton(
                 onPressed: () {
-                  print("hello");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
                 color: Colors.teal,
                 child: new Text(
@@ -64,10 +64,9 @@ class _MyScreen extends State<MyScreen> {
               ),
               width: 300,
             ),
-
             Padding(padding: EdgeInsets.only(top: 20)),
             SizedBox(
-              child:new RaisedButton(
+              child: new RaisedButton(
                 onPressed: () {
                   print("hello");
                 },
@@ -86,7 +85,6 @@ class _MyScreen extends State<MyScreen> {
               ),
               width: 300,
             ),
-
             Padding(padding: EdgeInsets.only(top: 20)),
             SizedBox(
               child: new RaisedButton(
@@ -108,7 +106,6 @@ class _MyScreen extends State<MyScreen> {
               ),
               width: 300,
             ),
-
           ],
         ),
       ),
